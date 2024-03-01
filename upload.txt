@@ -1,0 +1,11 @@
+open -u account_name,account_pass server_address
+set ftp:passive-mode true
+cd to/the/directory/you/wanna/upload
+put index.html
+put script.js
+put sendMessage.php
+put settings.php
+put style.css
+pwd
+ls
+bye
