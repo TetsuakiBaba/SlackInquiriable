@@ -8,16 +8,18 @@ Slack Inquiriable enables users to Send a message to Slack from the inquiry form
     ```
     git clone https://github.com/TetsuakiBaba/SlackInquiriable.git
     ```
-2. Get the slack webhook url
-    * [how to get slack webhook url](https://www.google.com/search?q=how+to+get+slack+webhook+url&rlz=1C5CHFA_enJP1043JP1043&oq=how+to+get+slack+web&gs_lcrp=EgZjaHJvbWUqCQgAEAAYExiABDIJCAAQABgTGIAEMgYIARBFGDkyCQgCEAAYExiABDIKCAMQABgIGBMYHjIKCAQQABgIGBMYHjIICAUQABgTGB4yCAgGEAAYExge0gEINDkwNGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8)
-
-3. Generate settings.php with the following command and rewrite webuhook_url and channnel to match your environment
+2. Generate settings.php with the following command and rewrite webuhook_url[^1] and channnel to match your environment  
+    ```
+    cd SlackInquiriable
+    ```
     ```
     echo '<?php $webhook_url = "https://hooks.slack.com/services/your_slack_webhook_url";
     $channel = "#channel_name_you_want_to_send";
     $message_to_slack = "The following inquiries were received The person in charge should reply to the e-mail address within one week."; ?>' > settings.php
     ```
-4. Verify behavior in the local environment.
+    [^1]: [how to get slack webhook url](https://www.google.com/search?q=how+to+get+slack+webhook+url&rlz=1C5CHFA_enJP1043JP1043&oq=how+to+get+slack+web&gs_lcrp=EgZjaHJvbWUqCQgAEAAYExiABDIJCAAQABgTGIAEMgYIARBFGDkyCQgCEAAYExiABDIKCAMQABgIGBMYHjIKCAQQABgIGBMYHjIICAUQABgTGB4yCAgGEAAYExge0gEINDkwNGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8)
+
+3. Verify behavior in the local environment.
     ```
     php -S localhost:8000
     ```
@@ -40,6 +42,3 @@ Upload the file to a server running php. Access the uploaded file from the brows
     More agreements!!
     </li>
   ```
-  
-
-# SlackInquiriable
